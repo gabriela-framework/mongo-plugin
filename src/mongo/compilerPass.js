@@ -1,12 +1,7 @@
 const MongoClient = require('mongodb').MongoClient;
-const {ucFirst, hasKey, is} = require('../../services/library/util');
 
 function _resolveConfig(config) {
-    if (hasKey(config, 'scope') && hasKey(config, 'shared')) {
-        throw new Error(`Mongo plugin configuration error. Configuration cannot have 'scope' and 'shared' at the same`);
-    }
 
-    return config;
 }
 
 function _defineMongoService(config) {
