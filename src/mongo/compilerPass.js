@@ -81,7 +81,7 @@ module.exports = {
 
             const resolvedConfig = _resolveConfig(mongoConfig);
 
-            compiler.add(_defineMongoService(mongoConfig));
+            compiler.add(_defineMongoService(resolvedConfig));
 
             if (mongoConfig.collections) {
                 const definitions = _defineMongoCollectionDefinitions(mongoConfig);
